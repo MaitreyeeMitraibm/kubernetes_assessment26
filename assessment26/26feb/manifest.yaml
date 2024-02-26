@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assessment26
+  labels:
+    app: assessment26
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: assessment26
+  template:
+    metadata:
+      labels:
+        app: assessment26
+    spec:
+      containers:
+      - name: assessment26
+        image: maitreyeemitra/assessment26:latest
+        ports:
+        - containerPort: 5000
